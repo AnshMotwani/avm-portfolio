@@ -1,66 +1,102 @@
 [
   {
-    "title": "SQL",
-    "imageSrc": "/skills/sqlserver.png"
-  },
-  {
     "title": "Python",
-    "imageSrc": "/skills/python.png"
+    "imageSrc": "/skills/python.png",
+    "category": "Programming Languages"
   },
   {
     "title": "Java",
-    "imageSrc": "/skills/java.png"
+    "imageSrc": "/skills/java.png",
+    "category": "Programming Languages"
+  },
+  {
+    "title": "SQL",
+    "imageSrc": "/skills/sqlserver.png",
+    "category": "Programming Languages"
+  },
+  {
+    "title": "PL/SQL",
+    "imageSrc": "/skills/plsql.png",
+    "category": "Programming Languages"
+  },
+  {
+    "title": "C++",
+    "imageSrc": "/skills/c++.png",
+    "category": "Programming Languages"
   },
   {
     "title": "Postgres",
-    "imageSrc": "/skills/postgresql.png"
-  },
-  {
-    "title": "Hadoop",
-    "imageSrc": "/skills/hadoop.png"
-  },
-  {
-    "title": "Spark",
-    "imageSrc": "/skills/spark.png"
-  },
-  {
-    "title": "HTML",
-    "imageSrc": "/skills/html.png"
-  },
-  {
-    "title": "CSS",
-    "imageSrc": "skills/css.png"
-  },
-  {
-    "title": "React",
-    "imageSrc": "skills/react.png"
-  },
-  {
-    "title": "Node",
-    "imageSrc": "skills/node.png"
+    "imageSrc": "/skills/postgresql.png",
+    "category": "Tools & Databases"
   },
   {
     "title": "MongoDB",
-    "imageSrc": "skills/mongodb.png"
+    "imageSrc": "/skills/mongodb.png",
+    "category": "Tools & Databases"
+  },
+  {
+    "title": "MySQL Server",
+    "imageSrc": "/skills/mysql.png",
+    "category": "Tools & Databases"
+  },
+  {
+    "title": "Hadoop",
+    "imageSrc": "/skills/hadoop.png",
+    "category": "Tools & Databases"
+  },
+  {
+    "title": "Spark",
+    "imageSrc": "/skills/spark.png",
+    "category": "Tools & Databases"
   },
   {
     "title": "Tableau",
-    "imageSrc": "skills/tableau.png"
+    "imageSrc": "/skills/tableau.png",
+    "category": "Tools & Databases"
   },
   {
-    "title": "AWS",
-    "imageSrc": "skills/aws.png"
-  },
-  {
-    "title": "Azure",
-    "imageSrc": "skills/azure.png"
+    "title": "Power BI",
+    "imageSrc": "/skills/powerbi.png",
+    "category": "Tools & Databases"
   },
   {
     "title": "Git",
-    "imageSrc": "skills/git.png"
+    "imageSrc": "/skills/git.png",
+    "category": "Tools & Databases"
   },
   {
     "title": "JIRA",
-    "imageSrc": "skills/JIRA.png"
+    "imageSrc": "/skills/JIRA.png",
+    "category": "Tools & Databases"
+  },
+  {
+    "title": "HTML",
+    "imageSrc": "/skills/html.png",
+    "category": "Frontend"
+  },
+  {
+    "title": "CSS",
+    "imageSrc": "/skills/css.png",
+    "category": "Frontend"
+  },
+  {
+    "title": "React",
+    "imageSrc": "/skills/react.png",
+    "category": "Frontend"
+  },
+  {
+    "title": "Figma",
+    "imageSrc": "/skills/figma.png",
+    "category": "Frontend"
+  },
+  {
+    "title": "AWS",
+    "imageSrc": "/skills/aws.png",
+    "category": "Cloud"
+  },
+  {
+    "title": "Azure",
+    "imageSrc": "/skills/azure.png",
+    "category": "Cloud"
   }
 ]

@@ -1,64 +1,112 @@
 @import "../../vars.css";
 
+/* Main Container */
 .container {
   color: var(--color-text);
-  margin-top: 120px;
+  margin-top: 100px;
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 100vw;
-  padding: 58px 10%;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 50px 10%;
+  gap: 20px;
+}
+
+/* Contact Title */
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text h2 {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
 .text p {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
+/* Contact Links */
 .links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  gap: 26px;
+  gap: 20px;
 }
 
+/* Each Contact Item */
 .link {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Contact Icon */
+.link img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Contact Links */
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
 }
 
+/* Hover Effects */
+.link:hover {
+  transform: scale(1.05);
+}
+
+.link a:hover {
+  color: var(--color-accent);
+}
+
+/* Responsive Design */
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column;
-    gap: 23px;
+    gap: 30px;
+    text-align: center;
+    padding: 40px 5%;
   }
 
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .text h2 {
+    font-size: 50px;
+  }
+
+  .text p {
+    font-size: 22px;
   }
 
   .links {
     align-items: center;
+  }
+
+  .link {
+    gap: 10px;
+  }
+
+  .link img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .link a {
+    font-size: 18px;
   }
 }

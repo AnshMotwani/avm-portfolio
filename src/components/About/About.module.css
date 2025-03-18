@@ -1,90 +1,190 @@
 @import "../../vars.css";
 
-.container{
-    position: relative; 
-    background-color: rgba(12, 12, 12, 0.6);
-    border-radius: 15px;
-    padding: 73px;
-    margin-top: 129px;
-    z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
+/* Main Container */
+.container {
+  color: var(--color-text);
+  margin: 50px auto;
+  width: 85%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Title */
 .title {
-    color: var(--color-text);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 55px;
+  z-index: 1;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+/* Main Content Layout */
+.aboutContent {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
 }
 
-.aboutImage{
-    width: 45%;
-    padding: 25px;
+/* Timeline Layout */
+.timelineContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 70px;
 }
 
-.aboutItems {
-    color: var(--color-text);
-    display: flex;
+/* Timeline Vertical Line */
+.timelineLine {
+    position: absolute;
+    left: calc(32% + 55px); /* Dynamically place it between year and event */
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background:  rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+  
+
+/* Year Block */
+.yearBlock {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+/* Year Section */
+.year {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  min-width: 120px;
+  text-align: right;
+  padding-right: 25px;
+  flex: 1;
+}
+
+/* Events Container */
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  flex: 2;
+}
+
+/* Event Card */
+.eventCard {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.15);
+  max-width: 500px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Event Hover Effect */
+.eventCard:hover {
+  transform: scale(1.02);
+}
+
+/* Event Logo */
+.eventLogo {
+  width: 60px;
+  margin-right: 15px;
+}
+
+/* Remove Circular Border for ASU */
+.fullLogo {
+  border-radius: 0;
+}
+
+/* Event Details */
+.eventDetails h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.eventDetails p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.eventDate {
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+/* About Me Section */
+.aboutMe {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--color-text);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* Hover Effect for About Me */
+.aboutMe:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 18px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .aboutContent {
     flex-direction: column;
-    gap: 50px;
-    
-}
-
-.aboutItem{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    border-radius: 20px;
-    list-style: none;
-    padding: 25px;
-    background-image: linear-gradient(90deg, rgba(165, 215, 232, 0.42) 0%, rgba(255, 255, 255, 0.0) 100%);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: 0.4s;
+  }
+
+  .timelineContainer {
+    padding-left: 30px;
+    width: 100%;
+  }
+
+  .aboutMe {
+    width: 100%;
+    max-width: 600px;
+  }
 }
-
-.aboutItem:hover{
-    background-size: 100% 100%;
-    transition: 0.3s;
-}
-
-.aboutItem h3 {
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.aboutItem p {
-    font-size: 20px;
-}
-
-
 
 @media screen and (max-width: 830px) {
-    .container{
-        background-color: transparent;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .content{
-        flex-direction: column;
-    }
-    .aboutImage{
-        display: none;
-    }
-    .aboutItems{
-        margin-top: 29px;
-    }
-    .aboutItem{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
+  .timelineContainer {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .timelineLine {
+    left: calc(10% + 60px);
+  }
+
+  .year {
+    text-align: left;
+  }
+
+  .eventCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -1,11 +1,16 @@
 @import "../../vars.css";
 
-/* Container */
+/* Main Container */
 .container {
   color: var(--color-text);
-  margin-top: 79px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%; /* Slightly increased to fit four categories */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Title */
@@ -16,28 +21,79 @@
   letter-spacing: 1.75px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 55px;
 }
 
 /* Content Layout */
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures even spacing */
   align-items: flex-start;
-  margin-top: 20px;
-  gap: 40px;
+  width: 100%;
+  gap: 20px; /* Keeps spacing between categories */
 }
 
-/* Skills Section (Grid Layout) */
-.skillsGrid {
-  width: 50%;
+/* Skill Category Box */
+
+.skillsCategory {
+  flex: 1; /* Makes each box adjust dynamically */
+  max-width: 300px; /* Ensures four fit in a row */
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Effect for Category Boxes */
+.skillsCategory:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Category Title */
+.categoryTitle {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: var(--color-text);
+}
+
+/* Skills Grid - 2 Columns for Programming Languages */
+.skillsGridTwoColumns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr); /* 2 skills per row */
+  gap: 15px;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  width: 100%;
+}
+
+/* Skills Grid - 3 Columns for Tools & Databases */
+.skillsGridThreeColumns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 skills per row */
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Skills Grid - Vertical for Other Categories */
+.skillsGridVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
 }
 
 /* Skill Item */
@@ -45,7 +101,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -56,148 +112,65 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 65px; /* Slightly smaller */
+  height: 65px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Skill Image */
 .skillImageContainer img {
-  width: 60px;
+  width: 40px;
 }
 
-/* Skill Hover Effect */
+/* Skill Hover Effect - White Glow */
 .skill:hover .skillImageContainer {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
 }
 
+/* Skill Label */
 .skill p {
-  font-size: 20px;
+  font-size: 14px;
   font-family: var(--font-roboto);
   font-weight: 500;
 }
 
-/* Experience History */
-.history {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .content {
+    justify-content: center; /* Centers categories on medium screens */
+  }
+
+  .skillsCategory {
+    max-width: 280px;
+  }
+
+  .skillsGridTwoColumns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skillsGridThreeColumns {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* History Item */
-.historyItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 17px;
-  background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-  border-radius: 12px;
-  padding: 24px;
-  transition: transform 0.2s ease-in-out;
-}
-
-/* History Item Hover Effect */
-.historyItem:hover {
-  transform: scale(1.02);
-}
-
-/* History Logo */
-.historyItem img {
-  width: 50px;
-  height: 50px;
-}
-
-/* History Details */
-.historyItemDetails {
-  font-family: var(--font-roboto);
-  flex: 1;
-}
-
-/* Organization Title */
-.historyItemDetails h3 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--color-text);
-}
-
-/* Role Details */
-.roleDetails {
-  margin-bottom: 15px;
-  padding-left: 10px;
-  border-left: 3px solid var(--color-secondary);
-}
-
-/* Role Title */
-.roleDetails h4 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: var(--color-text);
-}
-
-/* Role Date */
-.roleDetails p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #d1d1d1;
-  margin-bottom: 5px;
-}
-
-/* Experience Bullet Points */
-.roleDetails ul {
-  margin-top: 5px;
-  list-style-position: inside;
-  font-size: 17px;
-  list-style-type: disc;
-  margin-left: 5px;
-}
-
-.roleDetails ul li {
-  text-indent: -25px; /* Adjusts bullet alignment */
-  padding-left: 15px; /* Ensures proper indentation */
-  line-height: 1.6; /* Increases readability */
-}
-
-/* Responsive Design (Max Width: 830px) */
 @media screen and (max-width: 830px) {
   .content {
     flex-direction: column;
     align-items: center;
-    gap: 34px;
   }
 
-  .skillsGrid {
+  .skillsCategory {
     width: 100%;
-    grid-template-columns: repeat(3, minmax(80px, 1fr));
-    gap: 20px;
+    max-width: 300px;
   }
 
-  .history {
-    width: 100%;
-  }
-
-  .historyItem {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .roleDetails {
-    padding-left: 8px;
-  }
-
-  .roleDetails h4 {
-    font-size: 20px;
-  }
-
-  .roleDetails p {
-    font-size: 16px;
-  }
-
-  .roleDetails ul {
-    font-size: 16px;
+  .skillsGridTwoColumns,
+  .skillsGridThreeColumns {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
