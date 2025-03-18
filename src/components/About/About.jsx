@@ -41,9 +41,7 @@ export const About = () => {
         {/* Right: About Me */}
         <div className={styles.aboutMe}>
           <p>
-            I'm a graduate student at Arizona State University (MS in Computer Science - Big Data Systems) with a strong background in data engineering, analytics, and distributed systems.
-            With three years of industry experience, I’ve built scalable data pipelines, optimized databases, and designed architectures. I specialize in ETL workflows, real-time data streaming, and big data processing to drive insights and decision-making.
-            Passionate about turning data into impact, I thrive on solving complex data challenges using big data frameworks, ML models, and cloud technologies.
+          I'm a graduate student at ASU (MS in CS - Big Data Systems) with three years of experience in data engineering, analytics, and distributed systems. I specialize in ETL workflows, real-time data streaming, and big data processing to drive insights. Passionate about turning data into impact, I thrive on solving complex data challenges with big data frameworks, ML models, and cloud technologies.
           </p>
         </div>
       </div>
